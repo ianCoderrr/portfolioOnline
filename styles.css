@@ -131,3 +131,17 @@ footer p {
 #close-preview:hover {
     color: gray;
 }
+/* Background image */
+.bg-about-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120%;
+    background-image: url('images/ian_bg.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 1; /* Adjust opacity as needed */
+    z-index: -1; /* Ensure the background is behind other content */
+}
+

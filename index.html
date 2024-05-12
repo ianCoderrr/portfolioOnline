@@ -7,6 +7,22 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet">
     <style>
+        /* Add this CSS to your existing styles */
+        .project-container {
+            border-radius: 10px; /* Rounded corners for the container */
+            overflow: hidden; /* Hide overflowing content */
+        }
+
+        .project-image {
+            border-radius: 10px; /* Rounded corners for the image */
+            transition: transform 0.3s ease; /* Smooth transition */
+        }
+
+        .project-image:hover {
+            transform: scale(1.05); /* Scale up slightly on hover */
+        }
+    </style>
+    <style>
         /* Add this CSS to your existing styles or styles.css file */
         .modal {
             display: none;
@@ -62,19 +78,24 @@
         </div>
     </header>
     <main class="container mx-auto py-8">
-        <section id="About" class="mb-8 pt-16 pb-16"> 
-            <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0">
-                <div class="w-full md:w-1/2 flex justify-center">
-                    <img src="images/Pureza, Ian Ross A..png" alt="Your Name" class="rounded-full w-64 h-64 object-cover shadow-md">
-                </div>
-                <div class="w-full md:w-1/2">
-                    <h2 class="text-3xl font-bold mb-4">About Me</h2>
-                    <p class="text-lg">I have been creating commissioned artwork for clients since 2021, and I have developed a strong portfolio in various art styles.
-                        My passion for art and attention to detail allow me to bring my clients' visions to life through my illustrations and designs.
-                        With my TESDA NC3 accreditation, I have honed my skills and knowledge in graphic arts, ensuring that I deliver high-quality work to my clients.</p>
-                </div>
-            </div>
-        </section>
+        <section id="About" class="mb-8 pt-16 pb-16 relative" style="color: white; position: relative;"> <!-- Added inline style for text color and position -->
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center space-y-8 md:space-y-0 relative"> <!-- Added relative positioning -->
+        <div class="w-full md:w-1/2 flex justify-start relative"> <!-- Added justify-start class and relative positioning -->
+            <img src="images/nbg_ps.png" alt="Your Name" class="rounded-full w-64 h-64"> <!-- Added z-index to ensure this image is on top -->
+            <!-- <img src="images/ps.png" alt="Additional Image" class="absolute top-0 left-0 z-20"> Added additional image with absolute positioning -->
+        </div>
+        <div class="w-full md:w-1/2 bg-about-image"></div> <!-- Added a div for the background image -->
+        <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-bold mb-4">About Me</h2>
+            <p class="text-lg bg-black bg-opacity-50 text-white p-4 rounded-md focus:shadow-md"> <!-- Added background color and shadow -->
+                I am a Computer Science Graduate and have been creating commissioned artwork for clients since 2021, and I have developed a strong portfolio in various art styles. My passion for art and attention to detail allow me to bring my clients' visions to life through my illustrations and designs. With my TESDA NC3 accreditation, I have honed my skills and knowledge in graphic arts, ensuring that I deliver high-quality work to my clients.
+            </p>
+        </div>
+    </div>
+</section>
+
+        
+        
         <section id="Project" class="mb-8">
             <h2 class="text-3xl font-bold mb-4">Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
